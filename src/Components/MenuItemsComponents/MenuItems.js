@@ -12,11 +12,9 @@ const MenuItems = () => {
             .filter(menuItem => {
                 if (selectedCategory === "ALL") return true
                 return menuItem.category === selectedCategory
-            }
-
-            )
+            })
             .map(menuItem => {
-               return <MenuItem menuItem={menuItem}/>})
+               return <MenuItem key={menuItem.id} menuItem={menuItem}/>})
             }
         </div>
     )

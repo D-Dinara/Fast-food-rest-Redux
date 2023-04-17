@@ -6,8 +6,8 @@ const Allcategories = () => {
     
     return (
         <div className="all-categories">
-            {categories.map(category =>
-               <Filter category={category} />
+            {categories.map((category,index) =>
+               <Filter key={index} category={category} />
             )}
         </div>
     )

@@ -12,7 +12,9 @@ const Cart = () => {
         <div className="cart">
             <Link className="home-link" to="/"><h1>BEST BURGERS IN TOWN</h1></Link>
             <h2 className="your-cart">Your cart:</h2>
-            {cartItems.map(cartItem =>  <CartItem cartItem ={cartItem} />)}
+            {cartItems.map(cartItem =>  
+                <CartItem key={cartItem.id} cartItem ={cartItem} />
+            )}
             <h3 className="total">Quantity of portions: {GetTotal().totalQuantity}</h3>
             <h3 className="total">Total price: ${GetTotal().totalPrice.toFixed(2)}</h3>
         </div>
